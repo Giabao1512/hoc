@@ -1,0 +1,13 @@
+{% extends 'admin/base_site.html' %}
+
+{% block title %} Khoa hoc {% endblock %}
+
+{% block content %}
+    <h1>Thong ke thong tin cac khoa hoc</h1>
+    <h2>So luong khoa hoc: {{ course_count }}</h2>
+    <ul>
+        {% for c in course_stats %}
+            <li><strong> {{ c.subject }} </strong> co: {{ c.lesson_count }} bai hoc</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
